@@ -1,0 +1,30 @@
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  max-width:300px;
+  margin:left;
+  text-align: left;
+  font-family: arial;
+}
+p {
+  color:white;
+  hsl(0,100%,100%);
+}
+a{
+  font-size: 20px;
+  color:black;
+  text-decoration: none;
+}
+
+a:hover{
+  background-color:red;
+  color:blue;
+}
+body{
+  background-image:url(img.jpg);
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h2.season6{
+  color: yellow;
+}

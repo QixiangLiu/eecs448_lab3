@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 2</title>
+  </head>
+  <body>
+    <div class="mySlides">
+      <div class="numbertext">1 / 5</div>
+      <img src="1.jpg" style="width:20%">
+    </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+    <img src="2.jpg" style="width:20%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+    <img src="3.jpg" style="width:20%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+    <img src="4.jpg" style="width:20%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+    <img src="5.jpg" style="width:20%">
+  </div>
+
+
+    <br>
+    <button class="prev" onclick="plusSlides(-1)">Previous</button>
+    <button class="next" onclick="plusSlides(1)">Next</button>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+        function showSlides(n) {
+          var i;
+          //slides length: totoal number of slides
+          var slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none"; //hid all element
+          }
+          slides[slideIndex-1].style.display = "block"; //display current slides
+        }
+
+    </script>
+  </body>
+</html>

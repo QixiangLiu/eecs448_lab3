@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 4</title>
+  <style>
+    p
+    {
+      border: 8px solid rgb(11,111,111);
+      background-color: rgb(223,123,123);
+    }
+  </style>
+</head>
+  <body>
+    <p id ="para">The Style object can be accessed from the head section of the document, or from specific HTML element(s).
+      Accessing style object(s) from the head section of the document.</p><br>
+      <h1>Coloer is RGB, range fron 0-255</h1>
+      <h2>Border:</h2>
+      Red Value: <input id= "redB" min = "0" max = "255" type="number"><br>
+      Green Value:<input id= "greenB" min ="0" max = "255" type = "number"><br>
+      Blue Value: <input id="blueB" min = "0" max="255" type ="number"><br>
+      Width: <input id ="widthB" type="number" min ="0"><br>
+      <h2>Background Color:</h2>
+      Red Value: <input id="red" min = "0" max ="255" type = "number"><br>
+      Green Value:<input id="green" min = "0" max = "255" type ="number"><br>
+      Blue Value: <input id="blue" min = "0" max = "255" type = "number"><br>
+      <button type ="button" onclick = "changeColor()">Change Color</button>
+
+      <script>
+        function changeColor(){
+          var red1 = document.getElementById("redB").value;
+          var green1 = document.getElementById("greenB").value;
+          var blue1 = document.getElementById("blueB").value;
+          var width1 = document.getElementById("widthB").value;
+          var red2 = document.getElementById("red").value;
+          var green2 = document.getElementById("green").value;
+          var blue2 = document.getElementById("blue").value;
+          var para = document.getElementById("para");
+          var newWidth = width1 +"px";
+          var newColor = "rgb(" +red1+","+green1+","+blue1+")";
+          para.style.borderColor = newColor;
+          para.style.borderWidth = newWidth;
+          //background-color
+          var newColor2 = "rgb(" +red2+","+green2+","+blue2+")";
+          para.style.backgroundColor = newColor2;
+
+
+        }
+      </script>
+  </body>
+</html>
